@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Look-IA-te | Sedal — AI-Powered Beauty Tech</title>
+  <meta name="description" content="Look-IA-te by Sedal (Unilever): An AI-powered Magic Mirror that uses computer vision to deliver instant, personalized hair solutions. The first Beauty Tech experience in Argentina.">
+  <meta property="og:title" content="Look-IA-te | Sedal — AI-Powered Beauty Tech">
+  <meta property="og:description" content="An AI-powered Magic Mirror blending artificial intelligence and computer vision to deliver instant hair solutions.">
+  <meta property="og:image" content="logo.png">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/png" href="logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="lang-en">
+
+  <!-- Cursor Trail Canvas -->
+  <canvas id="cursor-canvas"></canvas>
+
+  <!-- Navigation -->
+  <nav id="navbar">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo">
+        <img src="logo.png" alt="Look-IA-te" />
+      </a>
+      <div class="nav-links">
+        <a href="#video" class="nav-link">Video</a>
+        <a href="#how-it-works" class="nav-link">
+          <span class="lang-en">How it Works</span>
+          <span class="lang-es">Cómo Funciona</span>
+        </a>
+        <a href="#results" class="nav-link">
+          <span class="lang-en">Results</span>
+          <span class="lang-es">Resultados</span>
+        </a>
+        <a href="#tour" class="nav-link">
+          <span class="lang-en">Tour</span>
+          <span class="lang-es">Gira</span>
+        </a>
+        <button id="lang-toggle" class="lang-btn" aria-label="Toggle language">
+          <span class="lang-en">ES 🇦🇷</span>
+          <span class="lang-es">EN 🇺🇸</span>
+        </button>
+      </div>
+      <button id="mobile-menu-btn" class="mobile-menu-btn" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ════════════════════════════════════════ HERO ════════════════════════════════════════ -->
+  <section id="hero">
+    <canvas id="hero-canvas"></canvas>
+    <div class="hero-content">
+      <div class="hero-badge reveal">
+        <span class="lang-en">AI-Powered Beauty Tech Experience</span>
+        <span class="lang-es">Experiencia Beauty Tech potenciada por IA</span>
+      </div>
+      <h1 class="hero-title reveal">
+        Look-<span class="gradient-text">IA</span>-te
+      </h1>
+      <p class="hero-subtitle reveal">
+        <span class="lang-en">"Try it before you style it"</span>
+        <span class="lang-es">"Probalo antes de peinarte"</span>
+      </p>
+      <div class="hero-client reveal">
+        <span class="client-label">
+          <span class="lang-en">A project by</span>
+          <span class="lang-es">Un proyecto de</span>
+        </span>
+        <span class="client-names">
+          <img src="logo.png" alt="Planetlambo" class="client-logo">
+          <span class="lang-en">for</span>
+          <span class="lang-es">para</span>
+          Unilever | Sedal
+        </span>
+      </div>
+    </div>
+    <a href="#intro" class="scroll-indicator" aria-label="Scroll down">
+      <span class="scroll-text">Scroll</span>
+      <div class="scroll-line"></div>
+    </a>
+  </section>
+
+  <!-- ════════════════════════════════════════ INTRO ════════════════════════════════════════ -->
+  <section id="intro">
+    <div class="container">
+      <div class="intro-grid">
+        <div class="intro-left reveal">
+          <h2 class="section-label">
+            <span class="lang-en">The Challenge</span>
+            <span class="lang-es">El Desafío</span>
+          </h2>
+          <p class="intro-question">
+            <span class="lang-en">How can a haircare brand connect with Gen Z in a way that feels personal, fun, and tech-forward — especially in the hype of a live concert tour?</span>
+            <span class="lang-es">¿Cómo puede una marca de cuidado capilar conectar con la Generación Z de manera personal, divertida y tecnológica — especialmente en la energía de una gira de conciertos en vivo?</span>
+          </p>
+        </div>
+        <div class="intro-right reveal">
+          <h2 class="section-label">
+            <span class="lang-en">The Solution</span>
+            <span class="lang-es">La Solución</span>
+          </h2>
+          <p class="intro-answer">
+            <span class="lang-en">We built an <strong>AI-powered Magic Mirror</strong> that let fans try on iconic hairstyles in real time using computer vision. Once they picked their favorite, professional stylists brought the look to life <strong>right there at the venue</strong>.</span>
+            <span class="lang-es">Creamos un <strong>Espejo Mágico potenciado por IA</strong> que permitió a las fans probar peinados icónicos en tiempo real usando visión computarizada. Una vez que elegían su favorito, estilistas profesionales lo hacían realidad <strong>ahí mismo en el venue</strong>.</span>
+          </p>
+        </div>
+      </div>
+      <div class="intro-tags reveal">
+        <span class="tag">#AI</span>
+        <span class="tag">#ComputerVision</span>
+        <span class="tag">#BeautyTech</span>
+        <span class="tag">#ExperientialMarketing</span>
+        <span class="tag">#GenZ</span>
+        <span class="tag">#MarTech</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════ VIDEO ════════════════════════════════════════ -->
+  <section id="video">
+    <div class="container">
+      <h2 class="section-title reveal">
+        <span class="lang-en">See it in Action</span>
+        <span class="lang-es">Miralo en Acción</span>
+      </h2>
+      <div class="video-wrapper reveal">
+        <div class="mirror-frame">
+          <div class="mirror-corner tl"></div>
+          <div class="mirror-corner tr"></div>
+          <div class="mirror-corner bl"></div>
+          <div class="mirror-corner br"></div>
+          <div class="mirror-shine"></div>
+          <video id="case-video" controls preload="metadata" playsinline>
+            <source src="Lambo_CasoSedal_V4_720p.mp4" type="video/mp4">
+          </video>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════ HOW IT WORKS ════════════════════════════════════════ -->
+  <section id="how-it-works">
+    <div class="container">
+      <h2 class="section-title reveal">
+        <span class="lang-en">How It Works</span>
+        <span class="lang-es">Cómo Funciona</span>
+      </h2>
+      <p class="section-subtitle reveal">
+        <span class="lang-en">Four simple steps to your perfect concert look</span>
+        <span class="lang-es">Cuatro simples pasos hacia tu look perfecto para el concierto</span>
+      </p>
+
+      <div class="steps-container">
+        <!-- Step 1 -->
+        <div class="step reveal" data-step="1">
+          <div class="step-icon">
+            <div class="icon-face">
+              <div class="scan-line"></div>
+              <svg viewBox="0 0 80 80" fill="none">
+                <ellipse cx="40" cy="36" rx="16" ry="20" stroke="currentColor" stroke-width="2"/>
+                <path d="M16 70 C16 54 64 54 64 70" stroke="currentColor" stroke-width="2" fill="none"/>
+                <!-- Detection corners -->
+                <path d="M10 10 L10 24" stroke="var(--pink)" stroke-width="2.5" class="detect-corner"/>
+                <path d="M10 10 L24 10" stroke="var(--pink)" stroke-width="2.5" class="detect-corner"/>
+                <path d="M70 10 L70 24" stroke="var(--pink)" stroke-width="2.5" class="detect-corner"/>
+                <path d="M70 10 L56 10" stroke="var(--pink)" stroke-width="2.5" class="detect-corner"/>
+                <path d="M10 70 L10 56" stroke="var(--pink)" stroke-width="2.5" class="detect-corner"/>
+                <path d="M10 70 L24 70" stroke="var(--pink)" stroke-width="2.5" class="detect-corner"/>
+                <path d="M70 70 L70 56" stroke="var(--pink)" stroke-width="2.5" class="detect-corner"/>
+                <path d="M70 70 L56 70" stroke="var(--pink)" stroke-width="2.5" class="detect-corner"/>
+              </svg>
+            </div>
+          </div>
+          <div class="step-number">01</div>
+          <h3 class="step-title">
+            <span class="lang-en">Step In</span>
+            <span class="lang-es">Acercate</span>
+          </h3>
+          <p class="step-desc">
+            <span class="lang-en">Stand before the Magic Mirror. The camera detects your face instantly.</span>
+            <span class="lang-es">Ponete frente al Espejo Mágico. La cámara detecta tu rostro al instante.</span>
+          </p>
+        </div>
+
+        <!-- Connector -->
+        <div class="step-connector reveal">
+          <svg viewBox="0 0 100 20" preserveAspectRatio="none">
+            <path d="M0 10 Q25 0 50 10 Q75 20 100 10" stroke="url(#connectorGrad)" stroke-width="2" fill="none" class="connector-path"/>
+            <defs>
+              <linearGradient id="connectorGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="var(--pink)"/>
+                <stop offset="100%" stop-color="var(--silver)"/>
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="step reveal" data-step="2">
+          <div class="step-icon">
+            <div class="icon-ai">
+              <div class="ai-dot" style="--i:0"></div>
+              <div class="ai-dot" style="--i:1"></div>
+              <div class="ai-dot" style="--i:2"></div>
+              <div class="ai-dot" style="--i:3"></div>
+              <div class="ai-dot" style="--i:4"></div>
+              <div class="ai-dot" style="--i:5"></div>
+              <div class="ai-dot center"></div>
+              <svg class="ai-connections" viewBox="0 0 80 80">
+                <line x1="40" y1="40" x2="15" y2="15" stroke="var(--pink)" stroke-width="1" opacity="0.4"/>
+                <line x1="40" y1="40" x2="65" y2="15" stroke="var(--pink)" stroke-width="1" opacity="0.4"/>
+                <line x1="40" y1="40" x2="15" y2="65" stroke="var(--silver)" stroke-width="1" opacity="0.4"/>
+                <line x1="40" y1="40" x2="65" y2="65" stroke="var(--silver)" stroke-width="1" opacity="0.4"/>
+                <line x1="40" y1="40" x2="10" y2="40" stroke="var(--pink)" stroke-width="1" opacity="0.4"/>
+                <line x1="40" y1="40" x2="70" y2="40" stroke="var(--silver)" stroke-width="1" opacity="0.4"/>
+              </svg>
+            </div>
+          </div>
+          <div class="step-number">02</div>
+          <h3 class="step-title">
+            <span class="lang-en">AI Analyzes</span>
+            <span class="lang-es">La IA Analiza</span>
+          </h3>
+          <p class="step-desc">
+            <span class="lang-en">Generative AI and computer vision analyze your features and suggest the perfect look.</span>
+            <span class="lang-es">IA generativa y visión computarizada analizan tus rasgos y sugieren el look perfecto.</span>
+          </p>
+        </div>
+
+        <!-- Connector -->
+        <div class="step-connector reveal">
+          <svg viewBox="0 0 100 20" preserveAspectRatio="none">
+            <path d="M0 10 Q25 20 50 10 Q75 0 100 10" stroke="url(#connectorGrad2)" stroke-width="2" fill="none" class="connector-path"/>
+            <defs>
+              <linearGradient id="connectorGrad2" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="var(--silver)"/>
+                <stop offset="100%" stop-color="var(--pink)"/>
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="step reveal" data-step="3">
+          <div class="step-icon">
+            <div class="icon-mirror">
+              <div class="mirror-reflection"></div>
+              <div class="hair-preview h1"></div>
+              <div class="hair-preview h2"></div>
+              <div class="hair-preview h3"></div>
+              <div class="hair-preview h4"></div>
+            </div>
+          </div>
+          <div class="step-number">03</div>
+          <h3 class="step-title">
+            <span class="lang-en">Preview Looks</span>
+            <span class="lang-es">Previsualizá</span>
+          </h3>
+          <p class="step-desc">
+            <span class="lang-en">See yourself with iconic hairstyles overlaid in real time. Choose your favorite.</span>
+            <span class="lang-es">Verte con peinados icónicos superpuestos en tiempo real. Elegí tu favorito.</span>
+          </p>
+        </div>
+
+        <!-- Connector -->
+        <div class="step-connector reveal">
+          <svg viewBox="0 0 100 20" preserveAspectRatio="none">
+            <path d="M0 10 Q25 0 50 10 Q75 20 100 10" stroke="url(#connectorGrad3)" stroke-width="2" fill="none" class="connector-path"/>
+            <defs>
+              <linearGradient id="connectorGrad3" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="var(--pink)"/>
+                <stop offset="100%" stop-color="var(--silver)"/>
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="step reveal" data-step="4">
+          <div class="step-icon">
+            <div class="icon-sparkle">
+              <div class="sparkle s1">✦</div>
+              <div class="sparkle s2">✦</div>
+              <div class="sparkle s3">✧</div>
+              <div class="sparkle s4">✧</div>
+              <div class="sparkle s5">✦</div>
+              <div class="scissors">✂</div>
+            </div>
+          </div>
+          <div class="step-number">04</div>
+          <h3 class="step-title">
+            <span class="lang-en">Get Styled</span>
+            <span class="lang-es">Peinarte</span>
+          </h3>
+          <p class="step-desc">
+            <span class="lang-en">Professional stylists bring your chosen look to life — right there at the venue.</span>
+            <span class="lang-es">Estilistas profesionales hacen realidad el look elegido — ahí mismo en el venue.</span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════ AI PICKER ════════════════════════════════════════ -->
+  <section id="ai-picker">
+    <div class="container">
+      <h2 class="section-title reveal">
+        <span class="lang-en">AI-Powered Recommendations</span>
+        <span class="lang-es">Recomendaciones potenciadas por IA</span>
+      </h2>
+      <p class="section-subtitle reveal">
+        <span class="lang-en">The AI suggests personalized looks based on your features. Hover to explore.</span>
+        <span class="lang-es">La IA sugiere looks personalizados según tus rasgos. Pasá el cursor para explorar.</span>
+      </p>
+
+      <div class="looks-grid reveal">
+        <div class="look-card" data-match="78">
+          <div class="look-visual" style="--hue: 330; --pattern: 1;">
+            <div class="look-wave"></div>
+            <div class="look-wave w2"></div>
+            <div class="look-wave w3"></div>
+          </div>
+          <div class="look-info">
+            <h4>Bold Waves</h4>
+            <span class="look-tag">
+              <span class="lang-en">Dynamic & Confident</span>
+              <span class="lang-es">Dinámico & Seguro</span>
+            </span>
+          </div>
+          <div class="match-bar">
+            <div class="match-fill" style="--match: 78"></div>
+            <span class="match-label">78%</span>
+          </div>
+        </div>
+
+        <div class="look-card recommended" data-match="94">
+          <div class="recommended-badge">
+            <span class="lang-en">✦ AI Pick</span>
+            <span class="lang-es">✦ Elegido por IA</span>
+          </div>
+          <div class="look-visual" style="--hue: 320; --pattern: 2;">
+            <div class="look-curl"></div>
+            <div class="look-curl c2"></div>
+            <div class="look-curl c3"></div>
+            <div class="look-curl c4"></div>
+          </div>
+          <div class="look-info">
+            <h4>Rock Curls</h4>
+            <span class="look-tag">
+              <span class="lang-en">Iconic & Stage-Ready</span>
+              <span class="lang-es">Icónico & Listo para el Show</span>
+            </span>
+          </div>
+          <div class="match-bar">
+            <div class="match-fill" style="--match: 94"></div>
+            <span class="match-label">94%</span>
+          </div>
+        </div>
+
+        <div class="look-card" data-match="65">
+          <div class="look-visual" style="--hue: 280; --pattern: 3;">
+            <div class="look-straight"></div>
+            <div class="look-straight s2"></div>
+            <div class="look-straight s3"></div>
+          </div>
+          <div class="look-info">
+            <h4>Sleek Straight</h4>
+            <span class="look-tag">
+              <span class="lang-en">Elegant & Polished</span>
+              <span class="lang-es">Elegante & Pulido</span>
+            </span>
+          </div>
+          <div class="match-bar">
+            <div class="match-fill" style="--match: 65"></div>
+            <span class="match-label">65%</span>
+          </div>
+        </div>
+
+        <div class="look-card" data-match="82">
+          <div class="look-visual" style="--hue: 340; --pattern: 4;">
+            <div class="look-braid"></div>
+            <div class="look-braid b2"></div>
+            <div class="look-braid b3"></div>
+          </div>
+          <div class="look-info">
+            <h4>Festival Braids</h4>
+            <span class="look-tag">
+              <span class="lang-en">Creative & Free</span>
+              <span class="lang-es">Creativo & Libre</span>
+            </span>
+          </div>
+          <div class="match-bar">
+            <div class="match-fill" style="--match: 82"></div>
+            <span class="match-label">82%</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════ RESULTS ════════════════════════════════════════ -->
+  <section id="results">
+    <div class="container">
+      <h2 class="section-title reveal">
+        <span class="lang-en">Results That Speak</span>
+        <span class="lang-es">Resultados que Hablan</span>
+      </h2>
+
+      <div class="stats-grid">
+        <div class="stat-card reveal">
+          <div class="stat-ring" data-value="82">
+            <svg viewBox="0 0 160 160">
+              <circle cx="80" cy="80" r="70" stroke="var(--dark-card)" stroke-width="8" fill="none"/>
+              <circle cx="80" cy="80" r="70" stroke="url(#statGrad1)" stroke-width="8" fill="none"
+                      stroke-dasharray="440" stroke-dashoffset="440" stroke-linecap="round"
+                      class="stat-circle" style="--target-offset: 79.2"/>
+              <defs>
+                <linearGradient id="statGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="var(--pink)"/>
+                  <stop offset="100%" stop-color="var(--pink-light)"/>
+                </linearGradient>
+              </defs>
+            </svg>
+            <div class="stat-value">
+              <span class="counter" data-target="82">0</span><span class="stat-symbol">%</span>
+            </div>
+          </div>
+          <p class="stat-label">
+            <span class="lang-en">Chose the AI-suggested look</span>
+            <span class="lang-es">Eligió el look sugerido por la IA</span>
+          </p>
+        </div>
+
+        <div class="stat-card reveal">
+          <div class="stat-ring" data-value="90">
+            <svg viewBox="0 0 160 160">
+              <circle cx="80" cy="80" r="70" stroke="var(--dark-card)" stroke-width="8" fill="none"/>
+              <circle cx="80" cy="80" r="70" stroke="url(#statGrad2)" stroke-width="8" fill="none"
+                      stroke-dasharray="440" stroke-dashoffset="440" stroke-linecap="round"
+                      class="stat-circle" style="--target-offset: 44"/>
+              <defs>
+                <linearGradient id="statGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" stop-color="var(--silver)"/>
+                  <stop offset="100%" stop-color="#fff"/>
+                </linearGradient>
+              </defs>
+            </svg>
+            <div class="stat-value">
+              <span class="counter" data-target="90">0</span><span class="stat-symbol">%</span>
+            </div>
+          </div>
+          <p class="stat-label">
+            <span class="lang-en">Satisfaction between suggestion & final choice</span>
+            <span class="lang-es">Satisfacción entre sugerencia y elección final</span>
+          </p>
+        </div>
+      </div>
+
+      <p class="stats-note reveal">
+        <span class="lang-en">Trained on thousands of datasets, combining computer vision, generative AI, and semantic processing — achieving real-time personalized hairstyle recommendations for the first time.</span>
+        <span class="lang-es">Entrenado con miles de datasets, combinando visión computarizada, IA generativa y procesamiento semántico — logrando recomendaciones de peinados personalizadas en tiempo real por primera vez.</span>
+      </p>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════ TOUR ════════════════════════════════════════ -->
+  <section id="tour">
+    <div class="container">
+      <h2 class="section-title reveal">
+        <span class="lang-en">Across Argentina</span>
+        <span class="lang-es">Por toda Argentina</span>
+      </h2>
+      <p class="section-subtitle reveal">
+        <span class="lang-en">From Lali Espósito's tour to Cosquín Rock — evolving city by city, learning which styles fans loved most.</span>
+        <span class="lang-es">Desde la gira de Lali Espósito hasta el Cosquín Rock — evolucionando ciudad por ciudad, aprendiendo qué estilos les gustaban más a las fans.</span>
+      </p>
+
+      <div class="timeline">
+        <div class="timeline-line"></div>
+
+        <div class="timeline-stop reveal" data-city="1">
+          <div class="stop-dot"></div>
+          <div class="stop-content">
+            <span class="stop-label">
+              <span class="lang-en">Premiere</span>
+              <span class="lang-es">Estreno</span>
+            </span>
+            <h4>Vélez, Buenos Aires</h4>
+            <p class="stop-detail">Estadio José Amalfitani</p>
+          </div>
+        </div>
+
+        <div class="timeline-stop reveal" data-city="2">
+          <div class="stop-dot"></div>
+          <div class="stop-content">
+            <h4>Rosario</h4>
+            <p class="stop-detail">Santa Fe</p>
+          </div>
+        </div>
+
+        <div class="timeline-stop reveal" data-city="3">
+          <div class="stop-dot"></div>
+          <div class="stop-content">
+            <h4>Córdoba</h4>
+          </div>
+        </div>
+
+        <div class="timeline-stop reveal" data-city="4">
+          <div class="stop-dot"></div>
+          <div class="stop-content">
+            <h4>San Luis</h4>
+          </div>
+        </div>
+
+        <div class="timeline-stop reveal" data-city="5">
+          <div class="stop-dot"></div>
+          <div class="stop-content">
+            <h4>Mendoza</h4>
+          </div>
+        </div>
+
+        <div class="timeline-stop reveal" data-city="6">
+          <div class="stop-dot"></div>
+          <div class="stop-content">
+            <span class="stop-label">
+              <span class="lang-en">Grand Finale</span>
+              <span class="lang-es">Gran Final</span>
+            </span>
+            <h4>Vélez, Buenos Aires</h4>
+            <p class="stop-detail">
+              <span class="lang-en">Tour Closing</span>
+              <span class="lang-es">Cierre de Gira</span>
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline-stop reveal special" data-city="7">
+          <div class="stop-dot"></div>
+          <div class="stop-content">
+            <span class="stop-label">2026</span>
+            <h4>Cosquín Rock</h4>
+            <p class="stop-detail">Córdoba —
+              <span class="lang-en">New hairstyles, new era</span>
+              <span class="lang-es">Nuevos peinados, nueva era</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════ TECH ════════════════════════════════════════ -->
+  <section id="tech">
+    <div class="container">
+      <h2 class="section-title reveal">
+        <span class="lang-en">Under the Hood</span>
+        <span class="lang-es">Bajo el Capó</span>
+      </h2>
+      <div class="tech-grid">
+        <div class="tech-card reveal">
+          <div class="tech-icon">
+            <svg viewBox="0 0 48 48" fill="none"><circle cx="24" cy="24" r="20" stroke="var(--pink)" stroke-width="1.5"/><circle cx="24" cy="24" r="4" fill="var(--pink)"/><circle cx="12" cy="14" r="3" stroke="var(--pink)" stroke-width="1.5"/><circle cx="36" cy="14" r="3" stroke="var(--pink)" stroke-width="1.5"/><circle cx="12" cy="34" r="3" stroke="var(--pink)" stroke-width="1.5"/><circle cx="36" cy="34" r="3" stroke="var(--pink)" stroke-width="1.5"/><line x1="24" y1="24" x2="12" y2="14" stroke="var(--pink)" stroke-width="1" opacity="0.5"/><line x1="24" y1="24" x2="36" y2="14" stroke="var(--pink)" stroke-width="1" opacity="0.5"/><line x1="24" y1="24" x2="12" y2="34" stroke="var(--pink)" stroke-width="1" opacity="0.5"/><line x1="24" y1="24" x2="36" y2="34" stroke="var(--pink)" stroke-width="1" opacity="0.5"/></svg>
+          </div>
+          <h4>
+            <span class="lang-en">Generative AI</span>
+            <span class="lang-es">IA Generativa</span>
+          </h4>
+          <p>
+            <span class="lang-en">Custom-trained models to generate hyper-personalized hairstyle recommendations in real time.</span>
+            <span class="lang-es">Modelos entrenados a medida para generar recomendaciones de peinados hiperpersonalizadas en tiempo real.</span>
+          </p>
+        </div>
+        <div class="tech-card reveal">
+          <div class="tech-icon">
+            <svg viewBox="0 0 48 48" fill="none"><rect x="6" y="10" width="36" height="28" rx="3" stroke="var(--silver)" stroke-width="1.5"/><circle cx="24" cy="24" r="8" stroke="var(--silver)" stroke-width="1.5"/><circle cx="24" cy="24" r="3" fill="var(--silver)" opacity="0.5"/><line x1="6" y1="16" x2="42" y2="16" stroke="var(--silver)" stroke-width="1" opacity="0.3"/></svg>
+          </div>
+          <h4>
+            <span class="lang-en">Computer Vision</span>
+            <span class="lang-es">Visión Computarizada</span>
+          </h4>
+          <p>
+            <span class="lang-en">Real-time face detection and feature analysis to map the ideal look onto each user.</span>
+            <span class="lang-es">Detección facial y análisis de rasgos en tiempo real para mapear el look ideal en cada usuaria.</span>
+          </p>
+        </div>
+        <div class="tech-card reveal">
+          <div class="tech-icon">
+            <svg viewBox="0 0 48 48" fill="none"><path d="M8 38 L8 10 L40 10 L40 38" stroke="var(--pink-light)" stroke-width="1.5" fill="none"/><path d="M14 30 Q20 18 26 26 Q32 34 38 22" stroke="var(--pink-light)" stroke-width="2" fill="none"/><circle cx="14" cy="30" r="2" fill="var(--pink-light)"/><circle cx="26" cy="26" r="2" fill="var(--pink-light)"/><circle cx="38" cy="22" r="2" fill="var(--pink-light)"/></svg>
+          </div>
+          <h4>
+            <span class="lang-en">Semantic Processing</span>
+            <span class="lang-es">Procesamiento Semántico</span>
+          </h4>
+          <p>
+            <span class="lang-en">Understanding context and preferences to match suggestions with user intent — 90% accuracy.</span>
+            <span class="lang-es">Comprensión de contexto y preferencias para coincidir sugerencias con la intención de la usuaria — 90% de precisión.</span>
+          </p>
+        </div>
+        <div class="tech-card reveal">
+          <div class="tech-icon">
+            <svg viewBox="0 0 48 48" fill="none"><path d="M24 6 L24 42" stroke="var(--silver)" stroke-width="1.5" stroke-dasharray="4 3"/><path d="M6 24 L42 24" stroke="var(--silver)" stroke-width="1.5" stroke-dasharray="4 3"/><circle cx="24" cy="24" r="16" stroke="var(--silver)" stroke-width="1.5"/><circle cx="24" cy="24" r="8" stroke="var(--silver)" stroke-width="1" opacity="0.5"/><circle cx="32" cy="18" r="3" fill="var(--pink)" opacity="0.8"/></svg>
+          </div>
+          <h4>
+            <span class="lang-en">Phygital Experience</span>
+            <span class="lang-es">Experiencia Phygital</span>
+          </h4>
+          <p>
+            <span class="lang-en">Bridging digital AI previews with real-world styling — from screen to scissors in minutes.</span>
+            <span class="lang-es">Conectando previsualizaciones digitales con estilismo real — de la pantalla a las tijeras en minutos.</span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════ QUOTE ════════════════════════════════════════ -->
+  <section id="quote">
+    <div class="container">
+      <blockquote class="main-quote reveal">
+        <p>
+          <span class="lang-en">"The true milestone was making all that complex technology <em>invisible</em> to the user. Look-IA-te shows how artificial intelligence, when designed with purpose, can be empathetic, approachable, and deeply emotional."</span>
+          <span class="lang-es">"El verdadero hito fue lograr que toda esa tecnología compleja se volviera <em>invisible</em> para quien la usaba. Look-IA-te demuestra cómo la inteligencia artificial, cuando se diseña con propósito, puede ser empática, cercana y profundamente emocional."</span>
+        </p>
+        <footer>
+          <cite>Marina Saroka</cite>
+          <span>Planetlambo</span>
+        </footer>
+      </blockquote>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════ PRESS ════════════════════════════════════════ -->
+  <section id="press">
+    <div class="container">
+      <h2 class="section-title reveal">
+        <span class="lang-en">In the Press</span>
+        <span class="lang-es">En la Prensa</span>
+      </h2>
+      <div class="press-grid">
+        <a href="https://www.latinspots.com/noticia/sedal-redefine-la-experiencia-beauty-tech-con-look-ia-te/93898" target="_blank" rel="noopener" class="press-card reveal">
+          <span class="press-source">Latin Spots</span>
+          <p>
+            <span class="lang-en">Sedal redefines the Beauty Tech experience with Look-IA-te</span>
+            <span class="lang-es">Sedal redefine la experiencia Beauty Tech con Look-IA-te</span>
+          </p>
+          <span class="press-arrow">→</span>
+        </a>
+        <a href="https://planetlambo.com/projects/sedal" target="_blank" rel="noopener" class="press-card reveal">
+          <span class="press-source">Planetlambo</span>
+          <p>
+            <span class="lang-en">Full case study — LookIAte by Sedal</span>
+            <span class="lang-es">Caso completo — LookIAte by Sedal</span>
+          </p>
+          <span class="press-arrow">→</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════ FOOTER ════════════════════════════════════════ -->
+  <footer id="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <img src="logo.png" alt="Planetlambo" class="footer-logo">
+          <p>
+            <span class="lang-en">AI development & production by <strong>Planetlambo</strong>.</span>
+            <span class="lang-es">Desarrollo y producción de IA por <strong>Planetlambo</strong>.</span>
+          </p>
+          <p class="footer-note">
+            <span class="lang-en">Experience implementation by <strong>BienBA</strong>.</span>
+            <span class="lang-es">Implementación de la experiencia por <strong>BienBA</strong>.</span>
+          </p>
+        </div>
+        <div class="footer-links">
+          <a href="https://planetlambo.com" target="_blank" rel="noopener">planetlambo.com</a>
+          <a href="https://planetlambo.com/projects/sedal" target="_blank" rel="noopener">
+            <span class="lang-en">Full Case Study</span>
+            <span class="lang-es">Caso Completo</span>
+          </a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025–2026 Look-IA-te. Unilever | Sedal.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
